@@ -1,0 +1,40 @@
+{
+  "name": "dsh-desktop",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness (dsh) 的 macOS 桌面壳：双击启动，自动拉起 dsh web 并加载界面",
+  "main": "main.js",
+  "license": "MIT",
+  "author": "zxmio",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zxmio/dsh-desktop.git"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac"
+  },
+  "dependencies": {
+    "@deepseek-ai/dsh": "0.1.0-rc.6"
+  },
+  "devDependencies": {
+    "electron": "^37.0.0",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.zxmio.dsh-desktop",
+    "productName": "DSH Desktop",
+    "asar": false,
+    "files": [
+      "main.js",
+      "package.json",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}
