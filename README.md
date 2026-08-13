@@ -1,4 +1,4 @@
-# DSH Desktop
+# DeepSeek Harness App
 
 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（`dsh`）的 macOS 桌面壳。双击打开 App，自动在后台拉起 `dsh web` 服务并在窗口中加载界面，不需要装 Node、不需要敲命令行。
 
@@ -6,7 +6,7 @@ A macOS desktop wrapper for DeepSeek Harness: launches the bundled `dsh web` ser
 
 ## 下载安装
 
-从 [Releases](https://github.com/zxmio/dsh-desktop/releases) 下载最新的 `.dmg`（Apple Silicon），拖入「应用程序」即可。
+从 [Releases](https://github.com/zxmio/deepseek-harness-app/releases) 下载最新的 `.dmg`（Apple Silicon），拖入「应用程序」即可。安装后的 App 名称为「DeepSeek Harness」。
 
 分发包未做 Apple 公证，首次打开如被 Gatekeeper 拦截：右键 App → 打开，或到「系统设置 → 隐私与安全性」中点「仍要打开」。
 
@@ -16,13 +16,13 @@ A macOS desktop wrapper for DeepSeek Harness: launches the bundled `dsh web` ser
 - 启动时用 Electron 自带的 Node 运行时（`ELECTRON_RUN_AS_NODE`）在随机空闲端口上运行 `dsh web`
 - 服务就绪后在窗口内加载界面；关闭窗口服务保持后台运行，Cmd+Q 退出时一并结束服务
 - dsh 的配置沿用其默认位置（`$DSH_HOME`），与命令行版 dsh 通用
-- 运行日志写在 `~/Library/Application Support/DSH Desktop/dsh.log`
+- 运行日志写在 `~/Library/Application Support/DeepSeek Harness/dsh.log`
 
 ## 开发运行
 
 ```bash
-git clone https://github.com/zxmio/dsh-desktop.git
-cd dsh-desktop
+git clone https://github.com/zxmio/deepseek-harness-app.git
+cd deepseek-harness-app
 npm install
 npm start
 ```

@@ -65,7 +65,7 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1280,
     height: 840,
-    title: 'DSH Desktop',
+    title: 'DeepSeek Harness',
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
@@ -87,7 +87,7 @@ function createWindow() {
 async function boot() {
   const logPath = path.join(app.getPath('userData'), 'dsh.log');
   const logStream = fs.createWriteStream(logPath, { flags: 'a' });
-  logStream.write(`\n===== DSH Desktop 启动 ${new Date().toISOString()} =====\n`);
+  logStream.write(`\n===== DeepSeek Harness App 启动 ${new Date().toISOString()} =====\n`);
 
   try {
     const port = await getFreePort();
