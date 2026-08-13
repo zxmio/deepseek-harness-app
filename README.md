@@ -4,6 +4,12 @@
 
 A macOS desktop wrapper for DeepSeek Harness: launches the bundled `dsh web` server and loads its UI in a native window. No Node.js or terminal required.
 
+## 下载安装
+
+从 [Releases](https://github.com/zxmio/dsh-desktop/releases) 下载最新的 `.dmg`（Apple Silicon），拖入「应用程序」即可。
+
+分发包未做 Apple 公证，首次打开如被 Gatekeeper 拦截：右键 App → 打开，或到「系统设置 → 隐私与安全性」中点「仍要打开」。
+
 ## 工作原理
 
 - App 内置了固定版本的 `@deepseek-ai/dsh`（当前 `0.1.0-rc.6`）
@@ -27,14 +33,14 @@ npm start
 npm run dist
 ```
 
-产物在 `dist/` 目录。未签名的包首次打开需要右键 → 打开，或在「系统设置 → 隐私与安全性」中放行。
+产物在 `dist/` 目录。推送 `v*` 格式的 tag 会触发 GitHub Actions 自动构建 dmg 并挂到 Release。
 
 ## 已知限制
 
-- 暂无自定义图标（用的 Electron 默认图标）
+- 只提供 Apple Silicon（arm64）构建
 - 未做 Apple 签名与公证，分发包会触发 Gatekeeper 提示
 - dsh 处于 developer preview 阶段，本项目锁定其具体版本，升级随本项目发版
 
 ## License
 
-MIT。DeepSeek Harness 本身同为 MIT 协议，版权归 DeepSeek AI。
+MIT。DeepSeek Harness 本身同为 MIT 协议，版权归 DeepSeek AI；App 图标中的鲸鱼标识来自 [Simple Icons](https://simpleicons.org/) 收录的 DeepSeek 品牌图形，版权归 DeepSeek。
