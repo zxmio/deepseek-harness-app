@@ -6,13 +6,9 @@ A macOS desktop wrapper for DeepSeek Harness: launches the bundled `dsh web` ser
 
 ## 下载安装
 
-从 [Releases](https://github.com/zxmio/deepseek-harness-app/releases) 下载最新的 `.dmg`（Apple Silicon），拖入「应用程序」即可。安装后的 App 名称为「DeepSeek Harness」。
+从 [Releases](https://github.com/zxmio/deepseek-harness-app/releases) 下载最新的 `.dmg`（Apple Silicon），拖入「应用程序」，双击打开即可。安装后的 App 名称为「DeepSeek Harness」。
 
-分发包未做 Apple 公证（个人开源项目，没有付费开发者账号），首次打开 macOS 会提示「已损坏」或「无法验证」。解决方法：拖入「应用程序」后，在终端执行一次下面的命令清除隔离标记，之后即可正常双击打开：
-
-```bash
-xattr -cr "/Applications/DeepSeek Harness.app"
-```
+v0.1.3 起分发包已完成 Apple Developer ID 签名与公证，无任何 Gatekeeper 拦截提示。
 
 ## 工作原理
 
@@ -42,7 +38,6 @@ npm run dist
 ## 已知限制
 
 - 只提供 Apple Silicon（arm64）构建
-- 未做 Apple 签名与公证，分发包会触发 Gatekeeper 提示
 - dsh 处于 developer preview 阶段，本项目锁定其具体版本，升级随本项目发版
 
 ## License
